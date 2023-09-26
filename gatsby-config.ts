@@ -9,7 +9,40 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-google-gtag", "gatsby-plugin-sitemap"]
+  plugins: [
+    "gatsby-plugin-sitemap",
+    // "gatsby-plugin-google-gtag",
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`),
+          require(`autoprefixer`)
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // The unique name for each instance
+        name: `assets`,
+        // Path to the directory
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // The unique name for each instance
+        name: `fonts`,
+        // Path to the directory
+        path: `${__dirname}/src/assets/fonts`,
+      },
+    },
+    
+    
+
+  ]
 };
 
 export default config;

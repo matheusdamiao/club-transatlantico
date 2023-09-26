@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "MilExtraBold";
+    font-weight: 800;
+    src: url('./Milligram-Extrabold-trial.ttf');
+  }
+  
+  @font-face {
+    font-family: 'MilLight';
+    font-weight: 300;
+    src: url('./Milligram-Light-trial.ttf');
+  }
+
