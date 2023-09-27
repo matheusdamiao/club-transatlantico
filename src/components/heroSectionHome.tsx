@@ -7,14 +7,14 @@ const HeroSectionHome = () => {
   return (
     <div>
       <div className="bg-black relative">
-        <nav className="lg:ml-12 lg:pl-6 flex lg:w-[50%] w-full top-0 items-center lg:justify-between px-11 z-40 fixed">
-          <ul className="flex gap-6 w-full items-center justify-center lg:justify-start">
+        <nav className="lg:ml-12 lg:pl-6 flex lg:w-[50%] w-full top-0 items-center lg:justify-between z-40 fixed">
+          <ul className="flex gap-6 w-full items-center lg:justify-start justify-between h-28 px-8">
             <li className="hover:underline pointer flex justify-center items-center">
-              <a className="text-white " href="">
+              <a className="text-white text-center" href="">
                 nossa história
               </a>
             </li>
-            <li className="lg:hidden block flex justify-center items-center">
+            <li className="lg:hidden justify-center items-center absolute left-[40vw] top-0">
               <img src={logo} alt="" className="w-full" />
             </li>
             <li className="hover:underline pointer flex justify-center items-center">

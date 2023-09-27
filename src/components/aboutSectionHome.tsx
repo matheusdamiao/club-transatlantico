@@ -3,15 +3,15 @@ import sp from "./../assets/images/bg-sp.png";
 
 const AboutSectionHome = () => {
   return (
-    <div className="lg:relative w-full lg:h-[75vh] h-full flex flex-col mb-28">
+    <div className="lg:relative w-full lg:h-[75vh] h-full flex flex-col mb-28 ">
       <img
         src={sp}
         alt=""
         className="object-cover lg:w-full h-[50vh] lg:h-full"
       />
-      <div className="lg:absolute top-[20%] grid grid-cols-1 gap-16 lg:grid-cols-2 ">
+      <div className="lg:absolute top-[20%] grid grid-cols-1 gap-16 lg:grid-cols-2 max-w-[1400px] m-auto left-0 right-0 ">
         <div className="flex flex-col px-11">
-          <h3 className="font-title lg:text-5xl text-4xl pt-12">
+          <h3 className="font-title lg:text-5xl text-4xl mt-11 lg:mt-0">
             Nossa missão é integrar cada vez mais a cultura do Brasil e da
             Europa
           </h3>

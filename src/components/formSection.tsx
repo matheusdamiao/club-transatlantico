@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import msg from "./../assets/images/msg-icon.svg";
 import zap from "./../assets/images/zap-icon.svg";
 import location from "./../assets/images/local-icon.svg";
+import WrapperMaps from "./wrapperMaps";
 
 const FormSection = () => {
   const [name, setName] = useState("");
@@ -29,13 +30,43 @@ const FormSection = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 px-11 py-20">
+    <div className="max-w-[1400px] m-auto grid lg:grid-cols-2 grid-cols-1 px-11 py-20">
       <div>
         <h2 className="font-title lg:text-5xl text-4xl">Venha fazer parte</h2>
         <h4 className="font-body lg:text-2xl text-xl my-6 max-w-xl">
-          Preencha o formulário abaixo e nossa equope entrará em contato com
+          Preencha o formulário abaixo e nossa equipe entrará em contato com
           você
         </h4>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <img
+              src={location}
+              alt=""
+              className="flex-shrink-0 max-h-[30px] max-w-[30px] w-full"
+            />
+            <p className="">
+              Av. Cecília Lottenberg, 130 - Chácara Santo Antônio, São Paulo
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <img
+              src={zap}
+              alt=""
+              className="flex-shrink-0 max-h-[25px] max-w-[25px] w-full"
+            />
+            <p>(11) 99611-6969</p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <img
+              src={msg}
+              alt=""
+              className="flex-shrink-0 max-h-[25px] max-w-[25px] w-full"
+            />
+            <p className="break-all">atendimento@clubtransatlantico.com.br</p>
+          </div>
+        </div>
         <form className="py-6 w-full group lg:row-span-4 " noValidate>
           <label className="mb-2 block">Nome</label>
           <input
@@ -109,25 +140,7 @@ const FormSection = () => {
         </form>
       </div>
       <div>
-        <div className=""></div>
-        <div>
-          <div>
-            <img src={location} alt="" />
-            <p>
-              Av. Cecília Lottenberg, 130 - Chácara Santo Antônio, São Paulo
-            </p>
-          </div>
-
-          <div>
-            <img src={zap} alt="" />
-            <p>(11) 99611-6969</p>
-          </div>
-
-          <div>
-            <img src={msg} alt="" />
-            <p>atendimento@clubtransatlantico.com.br</p>
-          </div>
-        </div>
+        <WrapperMaps />
       </div>
     </div>
   );
