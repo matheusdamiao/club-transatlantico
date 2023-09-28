@@ -25,7 +25,6 @@ const ClubSectionHome = () => {
         <img src={grayArch} alt="" />
       </div>
     </div>
-    // className="lg:block hidden"
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "./../assets/videos/video-about-bg.mp4";
+import hero from "./../assets/videos/video-full-about.mp4";
 import heroMobile from "./../assets/videos/Germany - SHORT TRAVEL FILM. Vertical video ｜ .mp4";
 import logo from "./../assets/images/logo_white_club.png";
 
@@ -32,7 +32,7 @@ const HeroSectionAbout = () => {
           muted
           loop
           src={hero}
-          className="hidden lg:block"
+          className="hidden lg:block w-full"
         ></video>
         <video
           autoPlay
