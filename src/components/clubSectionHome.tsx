@@ -5,7 +5,10 @@ import redArch from "./../assets/images/red-arch.png";
 
 const ClubSectionHome = () => {
   return (
-    <div className="h-full w-full xl:h-screen bg-white flex items-center gap-16 m-auto justify-center flex-col max-w-4xl py-16 px-11">
+    <div
+      id="clube"
+      className="h-full w-full xl:h-screen bg-white flex items-center gap-16 m-auto justify-center flex-col max-w-4xl py-16 px-11"
+    >
       <h2 className="font-title lg:text-5xl text-4xl py-11  text-center w-full">
         {" "}
         O Clube Transatlântico é a ponte entre o Brasil e a Europa

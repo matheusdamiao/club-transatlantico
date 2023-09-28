@@ -30,7 +30,10 @@ const FormSection = () => {
   };
 
   return (
-    <div className="max-w-[1400px] m-auto grid lg:grid-cols-2 grid-cols-1 px-11 py-20">
+    <div
+      id="contato"
+      className="max-w-[1400px] m-auto grid lg:grid-cols-2 grid-cols-1 px-11 py-20"
+    >
       <div>
         <h2 className="font-title lg:text-5xl text-4xl">Venha fazer parte</h2>
         <h4 className="font-body lg:text-2xl text-xl my-6 max-w-xl">

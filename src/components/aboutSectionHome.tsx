@@ -16,7 +16,7 @@ const AboutSectionHome = () => {
             Europa
           </h3>
           <a
-            href="/sobre"
+            href="/sobre#t"
             className=" text-center bg-amarelo px-8 py-3 mt-10 max-w-sm text-black rounded-xl font-title hover:scale-105 transition-all"
           >
             CONHEÇA NOSSA HISTÓRIA

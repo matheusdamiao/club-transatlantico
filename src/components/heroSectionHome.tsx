@@ -5,12 +5,12 @@ import logo from "./../assets/images/logo_white_club.png";
 
 const HeroSectionHome = () => {
   return (
-    <div>
+    <div id="topo">
       <div className="bg-black relative">
         <nav className="lg:ml-12 lg:pl-6 flex lg:w-[50%] w-full top-0 items-center lg:justify-between z-40 fixed">
           <ul className="flex gap-6 w-full items-center lg:justify-start justify-between h-28 px-8">
             <li className="hover:underline pointer flex justify-center items-center">
-              <a className="text-white text-center" href="">
+              <a className="text-white text-center" href="/sobre#t">
                 nossa história
               </a>
             </li>
@@ -18,7 +18,7 @@ const HeroSectionHome = () => {
               <img src={logo} alt="" className="w-full" />
             </li>
             <li className="hover:underline pointer flex justify-center items-center">
-              <a className="text-white" href="">
+              <a className="text-white" href="#contato">
                 contato
               </a>
             </li>
@@ -47,9 +47,12 @@ const HeroSectionHome = () => {
             Um elo de cultura entre o Brasil e a Europa
           </h3>
           <div className="flex mt-9">
-            <button className="bg-amarelo px-8 py-3 text-black rounded-xl font-title hover:scale-105 transition-all">
+            <a
+              className="bg-amarelo px-8 py-3 text-black rounded-xl font-title hover:scale-105 transition-all"
+              href="#clube"
+            >
               CONHEÇA NOSSO CLUB
-            </button>
+            </a>
           </div>
         </div>
       </div>
