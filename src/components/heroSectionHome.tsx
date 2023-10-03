@@ -45,7 +45,7 @@ const HeroSectionHome = () => {
           muted
           loop
           src={heroMobile}
-          className="block lg:hidden  min-h-[80vh]"
+          className="block w-full lg:hidden  min-h-[80vh]"
         ></video>
         <div className="lg:pl-16 px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
           <div className="lg:max-w-4xl max-w-[80%] w-full h-min flex flex-col lg:block">
