@@ -101,7 +101,7 @@ const HeroSectionHome = () => {
             data-aos-delay="500"
             data-aos-once="false"
             data-aos-duration="500"
-            className="flex-col absolute right-0 top-[-70vh] overflow-hidden flex"
+            className="hidden flex-col absolute right-0 top-[-70vh] overflow-hidden lg:flex"
           >
             <img src={yellowArch} alt="" />
             <img src={grayArch} alt="" />
