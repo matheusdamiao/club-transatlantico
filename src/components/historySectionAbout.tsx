@@ -3,15 +3,25 @@ import history from "./../assets/images/img-history.png";
 import yellowArch from "./../assets/images/yellow-arch.png";
 import grayArch from "./../assets/images/gray-arch.png";
 import redArch from "./../assets/images/red-arch.png";
+import Aos from "aos";
 
 const HistorySectionAbout = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
-    <div className="bg-white">
+    <div id="history" className="bg-white">
       <div className="w-full grid grid-cols-0 grid-rows-12 lg:pt-28 lg:pb-40 lg:grid-cols-2 lg:gap-16 max-w-[1400px] m-auto py-11 ">
-        <h1 className="font-title lg:text-5xl text-4xl py-11 pl-11 w-full">
+        <h1
+          data-aos="fade-down"
+          className="font-title lg:text-5xl text-4xl py-11 pl-11 w-full"
+        >
           O Clube Transatlântico
         </h1>
-        <div className="order-4 flex flex-col gap-16 py-10 lg:py-0">
+        <div
+          data-aos="fade-down"
+          className="order-4 flex flex-col gap-16 py-10 lg:py-0"
+        >
           {" "}
           <p className="font-sans px-11 text-lg lg:text-xl">
             O Club Transatlântico foi fundado em 1954 com o conceito de ser o

@@ -1,7 +1,11 @@
 import React from "react";
 import sp from "./../assets/images/bg-sp.png";
+import Aos from "aos";
 
 const AboutSectionHome = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
     <div className="lg:relative w-full lg:h-[75vh] h-full flex flex-col mb-28 ">
       <img
@@ -10,7 +14,7 @@ const AboutSectionHome = () => {
         className="object-cover lg:w-full h-[50vh] lg:h-full"
       />
       <div className="lg:absolute top-[20%] grid grid-cols-1 gap-16 lg:grid-cols-2 max-w-[1400px] m-auto left-0 right-0 ">
-        <div className="flex flex-col px-11">
+        <div data-aos="fade-down" className="flex flex-col px-11">
           <h3 className="font-title lg:text-5xl text-4xl mt-11 lg:mt-0">
             Nossa missão é integrar cada vez mais a cultura do Brasil e da
             Europa
@@ -23,7 +27,7 @@ const AboutSectionHome = () => {
           </a>
         </div>
         <div>
-          <p className="font-sans px-11 text-xl ">
+          <p data-aos="fade-top" className="font-sans px-11 text-xl ">
             Fundado em 1954 pela comunidade alemã residente em São Paulo, o Club
             Transatlântico transformou-se, ao longo dos anos, em um importante
             pólo multicultural e um clube de negócios. A história do Club teve
