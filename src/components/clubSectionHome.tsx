@@ -29,7 +29,7 @@ const ClubSectionHome = () => {
         Reunimos pessoas por meio de uma agenda cultural e social, contribuindo
         para o debate de ideias e promovendo a integração entre países.
       </p>
-      <div className="flex items-center justify-center overflow-hidden">
+      <div className="hidden lg:flex items-center justify-center overflow-hidden">
         <img src={yellowArch} alt="" />
         <img src={grayArch} alt="" />
         <img src={redArch} alt="" />
