@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "./../assets/videos/herovideobig.mp4";
-import heroMobile from "./../assets/videos/hero-mobile.mp4";
+import heroMobile from "./../assets/videos/Germany - SHORT TRAVEL FILM. Vertical video ｜ .mp4";
 // import logo from "./../assets/images/logo_white_club.png";
 import logo from "./../assets/images/club-logo-b-r.png";
 import { TypeAnimation } from "react-type-animation";
@@ -44,7 +44,7 @@ const HeroSectionHome = () => {
           autoPlay
           muted
           loop
-          src={heroMobile}
+          src={`${heroMobile}#t=12`}
           className="block w-full lg:hidden  min-h-[80vh]"
         ></video>
         <div className="lg:pl-16 px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
