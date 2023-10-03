@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "./../assets/videos/herovideobig.mp4";
-import heroMobile from "./../assets/videos/Germany - SHORT TRAVEL FILM. Vertical video ｜ .mp4";
+import heroMobile from "./../assets/videos/hero-mobile.mp4";
 // import logo from "./../assets/images/logo_white_club.png";
 import logo from "./../assets/images/club-logo-b-r.png";
 import { TypeAnimation } from "react-type-animation";
