@@ -45,7 +45,7 @@ const HeroSectionHome = () => {
           muted
           loop
           src={`${heroMobile}#t=12`}
-          className="block w-full lg:hidden  min-h-[80vh]"
+          className="block w-full lg:hidden min-h-[80vh] opacity-70"
         ></video>
         <div className="lg:pl-16 px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
           <div className="lg:max-w-4xl max-w-[80%] w-full h-min flex flex-col lg:block">
@@ -101,7 +101,7 @@ const HeroSectionHome = () => {
             data-aos-delay="500"
             data-aos-once="false"
             data-aos-duration="500"
-            className="hidden flex-col absolute right-0 top-[-70vh] overflow-hidden lg:flex"
+            className="flex-col absolute right-0 top-[-70vh] overflow-hidden flex"
           >
             <img src={yellowArch} alt="" />
             <img src={grayArch} alt="" />
