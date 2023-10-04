@@ -40,6 +40,10 @@ const FormSection = () => {
         setTimeout(() => {
           setIsSent(true);
           setIsLoading(false);
+          setInputs({ nome: "", phone: "", email: "" });
+          setTimeout(() => {
+            setIsSent(false);
+          }, 2000);
         }, 2000)
       )
       .catch((error) => alert(error));

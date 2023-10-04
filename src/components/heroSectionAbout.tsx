@@ -65,7 +65,24 @@ const HeroSectionAbout = () => {
             </ul>
             <ul className="lg:hidden w-full flex justify-between items-center px-6">
               <a href="/#topo">
-                <img src={home} alt="" />
+                <img
+                  src={home}
+                  alt=""
+                  className={`${menuHeight > 300 ? "hidden" : "block"}`}
+                />
+                <svg
+                  className={`${menuHeight < 300 ? "hidden" : "block"}`}
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1979 18.655V13.655H14.1979V18.655C14.1979 19.205 14.6479 19.655 15.1979 19.655H18.1979C18.7479 19.655 19.1979 19.205 19.1979 18.655V11.655H20.8979C21.3579 11.655 21.5779 11.085 21.2279 10.785L12.8679 3.255C12.4879 2.915 11.9079 2.915 11.5279 3.255L3.16785 10.785C2.82785 11.085 3.03785 11.655 3.49785 11.655H5.19785V18.655C5.19785 19.205 5.64785 19.655 6.19785 19.655H9.19785C9.74785 19.655 10.1979 19.205 10.1979 18.655Z"
+                    fill="black"
+                  />
+                </svg>
               </a>
               <div>
                 <a className="max-w-[80px] w-full block">
@@ -74,7 +91,32 @@ const HeroSectionAbout = () => {
               </div>
 
               <a href="#contato">
-                <img src={msg} alt="" />
+                <svg
+                  className={`${menuHeight < 300 ? "hidden" : "block"}`}
+                  width="30"
+                  height="30"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 3.5H3C2.73478 3.5 2.48043 3.60536 2.29289 3.79289C2.10536 3.98043 2 4.23478 2 4.5V15.5C2 15.7652 2.10536 16.0196 2.29289 16.2071C2.48043 16.3946 2.73478 16.5 3 16.5H17C17.2652 16.5 17.5196 16.3946 17.7071 16.2071C17.8946 16.0196 18 15.7652 18 15.5V4.5C18 4.23478 17.8946 3.98043 17.7071 3.79289C17.5196 3.60536 17.2652 3.5 17 3.5ZM4 14.5V5.5H16V14.5H4Z"
+                    fill="black"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.648 5.261L10.603 11.261C10.4214 11.4156 10.1904 11.5002 9.9518 11.4995C9.71322 11.4988 9.48276 11.4128 9.30204 11.257L2.34704 5.257C1.64504 4.652 2.07304 3.5 3.00004 3.5H17C17.93 3.5 18.356 4.658 17.648 5.261ZM5.69004 5.5L9.96004 9.183L14.282 5.5H5.69004Z"
+                    fill="black"
+                  />
+                </svg>
+                <img
+                  src={msg}
+                  alt=""
+                  className={`${menuHeight > 300 ? "hidden" : "block"}`}
+                />
               </a>
             </ul>
           </nav>
@@ -125,7 +167,7 @@ const HeroSectionAbout = () => {
               />
             </span>
           </div>
-          <div className="my-0 lg:mb-8 mx-auto flex flex-col items-center">
+          <div className="my-0 lg:mb-8 mx-auto flex flex-col items-center z-20">
             <a
               className="bg-transparent text-sm pb-3 lg:py-3 text-center tracking-widest text-white rounded-xl font-body hover:scale-105 transition-all"
               href="#history"
