@@ -25,6 +25,7 @@ const FormSection = () => {
     event.preventDefault();
 
     setIsLoading(true);
+    console.log(inputs);
 
     const form = event.target;
     fetch("/", {
@@ -62,7 +63,7 @@ const FormSection = () => {
     let value = event.target.value;
     setInputs({
       ...inputs,
-      [nome]: [value],
+      [nome]: value,
     });
   };
 
@@ -114,6 +115,7 @@ const FormSection = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={(e) => handleFormRequest(e)}
         >
           <input type="hidden" name="form-name" value="contact" />
           <label className="mb-2 block">Nome</label>
@@ -159,7 +161,7 @@ const FormSection = () => {
           </span>
           <button
             className={`items-center flex justify-center mt-2 font-title  text-xl w-full max-w-sm disabled:opacity-40 text-black  bg-amarelo hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2.5 text-center mb-2 group-invalid:pointer-events-none group-invalid:opacity-40 group-valid:shadow-2xl group-valid:hover:shadow-none`}
-            onClick={(e) => handleFormRequest(e)}
+            type="submit"
           >
             {isLoading && (
               <svg
