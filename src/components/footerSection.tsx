@@ -60,7 +60,10 @@ const FooterSection = () => {
                   fill="white"
                 />
               </svg>
-              <a href="mailto:atendimento@clubtransatlantico.com.br">
+              <a
+                className="break-all"
+                href="mailto:atendimento@clubtransatlantico.com.br"
+              >
                 atendimento@clubtransatlantico.com.br
               </a>
             </div>
@@ -87,7 +90,7 @@ const FooterSection = () => {
           <div className="flex flex-col gap-4">
             <p className="text-[#B1B1B1]">+55 (11) 99611-6969</p>
             <a
-              className="text-[#B1B1B1]"
+              className="text-[#B1B1B1] break-all"
               href="mailto:atendimento@clubtransatlantico.com.br"
             >
               atendimento@clubtransatlantico.com.br
