@@ -3,30 +3,67 @@ import msg from "./../assets/images/msg-icon.svg";
 import zap from "./../assets/images/zap-icon.svg";
 import location from "./../assets/images/local-icon.svg";
 import WrapperMaps from "./wrapperMaps";
+import { navigate } from "gatsby";
 
 const FormSection = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("");
+  const [inputs, setInputs] = useState({ nome: "", phone: "", email: "" });
   const [isSent, setIsSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  function encode(data: any) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
   const handleFormRequest = async (event: any) => {
     event.preventDefault();
+
     setIsLoading(true);
+
+    const form = event.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...inputs,
+      }),
+    })
+      .then(() =>
+        setTimeout(() => {
+          setIsSent(true);
+          setIsLoading(false);
+        }, 2000)
+      )
+      .catch((error) => alert(error));
   };
 
-  const handleFormChange = (event: any) => {
-    if (event.target.name === "name") {
-      setName(event.target.value);
-    }
-    if (event.target.name === "email") {
-      setEmail(event.target.value);
-    }
+  // const handleFormChange = (event: any) => {
+  //   if (event.target.name === "name") {
+  //     setName(event.target.value);
+  //   }
+  //   if (event.target.name === "email") {
+  //     setEmail(event.target.value);
+  //   }
 
-    if (event.target.name === "phone") {
-      setPhone(event.target.value);
-    }
+  //   if (event.target.name === "phone") {
+  //     setPhone(event.target.value);
+  //   }
+  // };
+
+  const handleFormChange = (event: any) => {
+    let nome = event.target.name;
+    let value = event.target.value;
+    setInputs({
+      ...inputs,
+      [nome]: [value],
+    });
   };
 
   return (
@@ -45,7 +82,7 @@ const FormSection = () => {
             <img
               src={location}
               alt=""
-              className="flex-shrink-0 max-h-[30px] max-w-[30px] w-full"
+              className="flex-shrink-0 max-h-[25px] max-w-[25px] w-full"
             />
             <p className="">
               Av. Cecília Lottenberg, 130 - Chácara Santo Antônio, São Paulo
@@ -56,7 +93,7 @@ const FormSection = () => {
             <img
               src={zap}
               alt=""
-              className="flex-shrink-0 max-h-[25px] max-w-[25px] w-full"
+              className="flex-shrink-0 max-h-[20px] max-w-[20px] w-full"
             />
             <p>(11) 99611-6969</p>
           </div>
@@ -65,19 +102,27 @@ const FormSection = () => {
             <img
               src={msg}
               alt=""
-              className="flex-shrink-0 max-h-[25px] max-w-[25px] w-full"
+              className="flex-shrink-0 max-h-[20px] max-w-[20px] w-full"
             />
             <p className="break-all">atendimento@clubtransatlantico.com.br</p>
           </div>
         </div>
-        <form className="py-6 w-full group lg:row-span-4 " noValidate>
+        <form
+          className="py-6 w-full group lg:row-span-4 "
+          noValidate
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <label className="mb-2 block">Nome</label>
           <input
             className="peer mb-2 w-full max-w-sm pl-4 py-3 border-[2px] focus:border-lightBlue invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 focus:outline-none rounded-lg empty:border-gray-400 border-solid bg-transparent valid:[&:not(:placeholder-shown)]:border-green"
             type="text"
             placeholder="Nome"
-            value={name}
-            name="name"
+            value={inputs.nome}
+            name="nome"
             onChange={(e) => handleFormChange(e)}
             required
             pattern="^[\p{L} ']+$"
@@ -90,7 +135,7 @@ const FormSection = () => {
             className="peer w-full max-w-sm mb-2 pl-4 py-3 border-[2px] focus:border-lightBlue invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 focus:outline-none rounded-lg empty:border-gray-400 border-solid bg-transparent valid:[&:not(:placeholder-shown)]:border-green"
             type="text"
             placeholder="E-mail"
-            value={email}
+            value={inputs.email}
             name="email"
             onChange={(e) => handleFormChange(e)}
             required
@@ -102,13 +147,12 @@ const FormSection = () => {
           <label className="mb-2 block">Telefone</label>
           <input
             className="peer w-full  max-w-sm pl-4 mb-2 py-3 border-[2px] focus:border-lightBlue invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 focus:outline-none rounded-lg empty:border-gray-400 border-solid bg-transparent valid:[&:not(:placeholder-shown)]:border-green"
-            type="text"
             placeholder="Telefone"
-            value={phone}
+            value={inputs.phone}
             name="phone"
             onChange={(e) => handleFormChange(e)}
             required
-            pattern="^\+?[0-9\s-]+$"
+            pattern="^[^A-Za-z]*$"
           />
           <span className="mb-4 hidden w-full text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block ">
             Insira seu telefone
