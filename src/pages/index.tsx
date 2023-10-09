@@ -8,6 +8,7 @@ import SocialSection from "../components/socialSection";
 import FooterSection from "../components/footerSection";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import SEO from "../components/seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   React.useEffect(() => {
@@ -28,4 +29,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <SEO />;
