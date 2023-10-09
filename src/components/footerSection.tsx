@@ -43,10 +43,10 @@ const FooterSection = () => {
             <p className="text-[#B1B1B1]">
               Sábados, Domingos e feriados: fechado
             </p>
-            <p className="mt-4 text-[#B1B1B1]">
+            {/* <p className="mt-4 text-[#B1B1B1]">
               *Reservas de almoços todos os dias e jantares na terça-feira.
               Exclusivo para sócio.{" "}
-            </p>
+            </p> */}
             <div className="flex items-center mt-2">
               <svg
                 width="18"

@@ -19,8 +19,6 @@ const HeroSectionHome = () => {
     if (size !== undefined) {
       setMenuHeight(size.scrollY);
     }
-    // console.log(size);
-    console.log(menuHeight);
   }, [size?.scrollY, size?.width, size?.height]);
 
   useEffect(() => {
@@ -68,8 +66,7 @@ const HeroSectionHome = () => {
               <a className="flex gap-2" href="/sobre#t">
                 {/* <img src={people} alt="" /> */}
 
-                <a
-                  href="/sobre#t"
+                <h4
                   className={`${
                     menuHeight > 300
                       ? "text-black border-black font-bold"
@@ -77,7 +74,7 @@ const HeroSectionHome = () => {
                   } rounded bg-transparent border-2  border-solid text-xs px-3 py-1 flex items-center justify-center`}
                 >
                   sobre nós
-                </a>
+                </h4>
               </a>
               <div className="absolute right-0 m-auto bottom-0 h-full w-[50%] left-0">
                 <a
@@ -99,14 +96,10 @@ const HeroSectionHome = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
                     d="M17 3.5H3C2.73478 3.5 2.48043 3.60536 2.29289 3.79289C2.10536 3.98043 2 4.23478 2 4.5V15.5C2 15.7652 2.10536 16.0196 2.29289 16.2071C2.48043 16.3946 2.73478 16.5 3 16.5H17C17.2652 16.5 17.5196 16.3946 17.7071 16.2071C17.8946 16.0196 18 15.7652 18 15.5V4.5C18 4.23478 17.8946 3.98043 17.7071 3.79289C17.5196 3.60536 17.2652 3.5 17 3.5ZM4 14.5V5.5H16V14.5H4Z"
                     fill="black"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
                     d="M17.648 5.261L10.603 11.261C10.4214 11.4156 10.1904 11.5002 9.9518 11.4995C9.71322 11.4988 9.48276 11.4128 9.30204 11.257L2.34704 5.257C1.64504 4.652 2.07304 3.5 3.00004 3.5H17C17.93 3.5 18.356 4.658 17.648 5.261ZM5.69004 5.5L9.96004 9.183L14.282 5.5H5.69004Z"
                     fill="black"
                   />

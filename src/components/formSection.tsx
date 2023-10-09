@@ -25,7 +25,6 @@ const FormSection = () => {
     event.preventDefault();
 
     setIsLoading(true);
-    console.log(inputs);
 
     const form = event.target;
     fetch("/", {

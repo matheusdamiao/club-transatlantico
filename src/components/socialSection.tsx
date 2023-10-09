@@ -10,9 +10,18 @@ const SocialSection = () => {
         Acompanhe nossas redes sociais
       </h2>
       <div className="flex w-full max-w-sm m-auto items-center justify-between ">
-        <img src={insta} alt="instagram" />
-        <img src={linkedin} alt="linkedin" />
-        <img src={face} alt="facebook" />
+        <a href="https://www.instagram.com/clubtransatlantico/" target="_blank">
+          <img src={insta} alt="instagram" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/club-transatl-ntico/about/"
+          target="_blank"
+        >
+          <img src={linkedin} alt="linkedin" />
+        </a>
+        <a href="https://www.facebook.com/ClubTransatlantico" target="_blank">
+          <img src={face} alt="facebook" />
+        </a>
       </div>
     </div>
   );

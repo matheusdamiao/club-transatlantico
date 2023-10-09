@@ -19,7 +19,6 @@ const SEO = ({ title, description }: PropsSEO) => {
     }
   `);
 
-  console.log(data);
   const seo = {
     title: title || data.site.siteMetadata.title,
     description: description || data.site.siteMetadata.description,

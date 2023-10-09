@@ -20,7 +20,7 @@ const ClubSectionHome = () => {
         className="font-title lg:text-5xl text-4xl py-11  text-center w-full"
       >
         {" "}
-        O Clube Transatlântico é a ponte entre o Brasil e a Europa
+        O Club Transatlântico é a ponte entre o Brasil e a Europa
       </h2>
       <p
         data-aos="fade-down"

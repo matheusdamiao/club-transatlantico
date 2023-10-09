@@ -1,5 +1,5 @@
 import React from "react";
-import bgReish from "./../assets/images/reishtags-bg.png";
+import bgReish from "./../assets/images/reishtags-bg-w.webp";
 import Aos from "aos";
 
 const ValuesSectionAbout = () => {

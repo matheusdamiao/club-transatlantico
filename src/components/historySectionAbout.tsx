@@ -1,5 +1,5 @@
 import React from "react";
-import history from "./../assets/images/img-history.png";
+import history from "./../assets/images/img-history-w.webp";
 import yellowArch from "./../assets/images/yellow-arch.png";
 import grayArch from "./../assets/images/gray-arch.png";
 import redArch from "./../assets/images/red-arch.png";
@@ -16,7 +16,7 @@ const HistorySectionAbout = () => {
           data-aos="fade-down"
           className="font-title lg:text-5xl text-4xl py-11 pl-11 w-full"
         >
-          O Clube Transatlântico
+          O Club Transatlântico
         </h1>
         <div
           data-aos="fade-down"
