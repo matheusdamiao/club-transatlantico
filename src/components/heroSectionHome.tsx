@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import hero from "./../assets/videos/herovideobig.mp4";
 import heroMobile from "./../assets/videos/hero-mobile.mp4";
 import logo from "./../assets/images/club-logo-b-r.png";
+import logoBranco from "./../assets/images/Logo_branco.png";
+
 import { TypeAnimation } from "react-type-animation";
 import yellowArch from "./../assets/images/yellow-arch.png";
 import grayArch from "./../assets/images/gray-arch.png";
@@ -14,28 +16,47 @@ import useWindowDimensions from "../utils/useWindownDimensions";
 const HeroSectionHome = () => {
   const size = useWindowDimensions();
   const [menuHeight, setMenuHeight] = useState(0);
+  const [isBottom, setIsBottom] = useState(false);
 
   useEffect(() => {
     if (size !== undefined) {
       setMenuHeight(size.scrollY);
+      if (size?.scrollY >= 3000) {
+        setIsBottom(true);
+      }
+      if (size?.scrollY <= 3000) {
+        setIsBottom(false);
+      }
     }
+
+    console.log(size?.scrollY);
   }, [size?.scrollY, size?.width, size?.height]);
 
   useEffect(() => {
     Aos.init();
   }, []);
+
   return (
     <div id="topo">
+      <a
+        href="#topo"
+        className={`${
+          isBottom ? "block" : "hidden"
+        } bg-[#2B2B2B] flex items-center justify-center text-3xl  rounded-xl px-2 bottom-10 right-4 animate-bounce  fixed text-[#FFCC00]`}
+      >
+        ^
+      </a>
       <div className="bg-black relative">
         <div
           className={`w-full h-16 lg:h-20 ${
-            menuHeight > 100 ? "bg-cinza/30" : "bg-transparent"
+            menuHeight > 400 ? "bg-cinza/30" : "bg-transparent"
           }  fixed z-30 lg:top-0 transition-transform ${
-            menuHeight > 200 ? "bottom-0 " : "top-0"
+            menuHeight > 400 ? "bottom-0 " : "top-0"
           }
+          ${isBottom && "hidden"}
           `}
         >
-          <nav className="flex w-full lg:w-[50vw] h-full items-center lg:justify-between z-40 lg:ml-4">
+          <nav className=" flex w-full lg:w-[50vw] h-full items-center lg:justify-between z-40 lg:ml-4">
             <ul className="hidden lg:flex gap-6 w-full items-center justify-between h-28 pl-9 lg:pl-11">
               <div className="flex w-full items-center gap-10">
                 <li className="hover:underline pointer flex justify-center items-center gap-2">
@@ -58,17 +79,15 @@ const HeroSectionHome = () => {
                 </li>
               </div>
 
-              <li className="max-w-[100px] lg:max-w-[80px] w-full justify-center items-center">
-                <img src={logo} alt="" className="w-full" />
+              <li className="max-w-[100px]  w-full justify-center items-center">
+                <img src={logoBranco} alt="" className={`w-full   `} />
               </li>
             </ul>
             <ul className="lg:hidden w-full flex justify-between items-center px-4">
               <a className="flex gap-2" href="/sobre#t">
-                {/* <img src={people} alt="" /> */}
-
                 <h4
                   className={`${
-                    menuHeight > 300
+                    menuHeight > 400
                       ? "text-black border-black font-bold"
                       : "text-white border-white"
                   } rounded bg-transparent border-2  border-solid text-xs px-3 py-1 flex items-center justify-center`}
@@ -81,14 +100,26 @@ const HeroSectionHome = () => {
                   href="/#topo"
                   className="max-w-[80px] w-full m-auto h-full flex items-center justify-center"
                 >
-                  <img src={logo} alt="" className="w-full " />
+                  <img
+                    src={logo}
+                    alt=""
+                    className={`w-full ${
+                      menuHeight > 400 ? "block" : "hidden"
+                    } `}
+                  />
+                  <img
+                    src={logoBranco}
+                    alt=""
+                    className={`w-full ${
+                      menuHeight > 400 ? "hidden" : "block"
+                    } `}
+                  />
                 </a>
               </div>
 
               <a className="flex gap-2" href="#contato">
-                {/* <small className="text-white text-xs">contato</small> */}
                 <svg
-                  className={`${menuHeight < 300 ? "hidden" : "block"}`}
+                  className={`${menuHeight < 400 ? "hidden" : "block"}`}
                   width="30"
                   height="30"
                   viewBox="0 0 20 20"
@@ -108,12 +139,13 @@ const HeroSectionHome = () => {
                 <img
                   src={msg}
                   alt=""
-                  className={`${menuHeight < 300 ? "block" : "hidden"}`}
+                  className={`${menuHeight < 400 ? "block" : "hidden"}`}
                 />
               </a>
             </ul>
           </nav>
         </div>
+
         <video
           autoPlay
           muted
@@ -133,9 +165,6 @@ const HeroSectionHome = () => {
             <span className="lg:text-6xl leading-tight text-5xl font-body ">
               Entre o Brasil e a Europa, somos um elo de
             </span>
-            {/* <h3 className="font-body lg:text-5xl text-2xl max-w-3xl pt-4">
-            Somos um elo de cultura entre o Brasil e a Europa
-          </h3> */}
             <span className={`text-5xl lg:text-6xl`}>
               <TypeAnimation
                 repeat={Infinity}

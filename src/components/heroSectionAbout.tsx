@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import hero from "./../assets/videos/video-full-about.mp4";
 import heroMobile from "./../assets/videos/Germany - SHORT TRAVEL FILM. Vertical video ｜ .mp4";
 import logo from "./../assets/images/club-logo-b-r.png";
+import logoBranco from "./../assets/images/Logo_branco.png";
 import yellowArch from "./../assets/images/yellow-arch.png";
 import grayArch from "./../assets/images/gray-arch.png";
 import redArch from "./../assets/images/red-arch.png";
@@ -14,10 +15,18 @@ import msg from "./../assets/images/msg-icon-l.svg";
 const HeroSectionAbout = () => {
   const size = useWindowDimensions();
   const [menuHeight, setMenuHeight] = useState(0);
+  const [isBottom, setIsBottom] = useState(false);
 
   useEffect(() => {
     if (size !== undefined) {
       setMenuHeight(size.scrollY);
+      console.log(size.scrollY);
+      if (size?.scrollY >= 5000) {
+        setIsBottom(true);
+      }
+      if (size?.scrollY <= 5000) {
+        setIsBottom(false);
+      }
     }
   }, [size?.scrollY, size?.width, size?.height]);
 
@@ -26,13 +35,22 @@ const HeroSectionAbout = () => {
   }, []);
   return (
     <div id="t">
+      <a
+        href="#t"
+        className={`${
+          isBottom ? "block" : "hidden"
+        } bg-[#2B2B2B] flex items-center justify-center text-3xl  rounded-xl px-2 bottom-10 right-4 animate-bounce  fixed text-[#FFCC00]`}
+      >
+        ^
+      </a>
       <div className="bg-black relative">
         <div
           className={`w-full h-16 lg:h-20 ${
-            menuHeight > 100 ? "bg-cinza/30" : "bg-transparent"
+            menuHeight > 400 ? "bg-cinza/30" : "bg-transparent"
           }  fixed z-30 lg:top-0 transition-transform ${
-            menuHeight > 200 ? "bottom-0 " : "top-0"
+            menuHeight > 400 ? "bottom-0 " : "top-0"
           }
+          ${isBottom && "hidden"}
           `}
         >
           <nav className="flex w-full lg:w-[50vw] h-full items-center lg:justify-between z-40 lg:ml-4">
@@ -58,8 +76,8 @@ const HeroSectionAbout = () => {
                 </li>
               </div>
 
-              <li className="max-w-[100px] lg:max-w-[80px] w-full justify-center items-center">
-                <img src={logo} alt="" className="w-full" />
+              <li className="max-w-[100px]  w-full justify-center items-center">
+                <img src={logoBranco} alt="" className="w-full" />
               </li>
             </ul>
             <ul className="lg:hidden w-full flex justify-between items-center px-6">
@@ -67,10 +85,10 @@ const HeroSectionAbout = () => {
                 <img
                   src={home}
                   alt=""
-                  className={`${menuHeight > 300 ? "hidden" : "block"}`}
+                  className={`${menuHeight > 400 ? "hidden" : "block"}`}
                 />
                 <svg
-                  className={`${menuHeight < 300 ? "hidden" : "block"}`}
+                  className={`${menuHeight < 400 ? "hidden" : "block"}`}
                   width="30"
                   height="30"
                   viewBox="0 0 24 24"
@@ -85,13 +103,26 @@ const HeroSectionAbout = () => {
               </a>
               <div>
                 <a className="max-w-[80px] w-full block">
-                  <img src={logo} alt="" className="w-full" />
+                  <img
+                    src={logo}
+                    alt=""
+                    className={`w-full ${
+                      menuHeight > 400 ? "block" : "hidden"
+                    } `}
+                  />
+                  <img
+                    src={logoBranco}
+                    alt=""
+                    className={`w-full ${
+                      menuHeight > 400 ? "hidden" : "block"
+                    } `}
+                  />
                 </a>
               </div>
 
               <a href="#contato">
                 <svg
-                  className={`${menuHeight < 300 ? "hidden" : "block"}`}
+                  className={`${menuHeight < 400 ? "hidden" : "block"}`}
                   width="30"
                   height="30"
                   viewBox="0 0 20 20"
@@ -110,7 +141,7 @@ const HeroSectionAbout = () => {
                 <img
                   src={msg}
                   alt=""
-                  className={`${menuHeight > 300 ? "hidden" : "block"}`}
+                  className={`${menuHeight > 400 ? "hidden" : "block"}`}
                 />
               </a>
             </ul>

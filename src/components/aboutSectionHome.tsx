@@ -1,7 +1,5 @@
 import React from "react";
-// import sp from "./../assets/images/bg-sp.png";
 import sp from "./../assets/images/bg-sp-w.webp";
-
 import Aos from "aos";
 
 const AboutSectionHome = () => {

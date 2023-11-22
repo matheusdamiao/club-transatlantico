@@ -6,9 +6,6 @@ import WrapperMaps from "./wrapperMaps";
 import { navigate } from "gatsby";
 
 const FormSection = () => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
   const [inputs, setInputs] = useState({ nome: "", phone: "", email: "" });
   const [isSent, setIsSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,19 +44,6 @@ const FormSection = () => {
       )
       .catch((error) => alert(error));
   };
-
-  // const handleFormChange = (event: any) => {
-  //   if (event.target.name === "name") {
-  //     setName(event.target.value);
-  //   }
-  //   if (event.target.name === "email") {
-  //     setEmail(event.target.value);
-  //   }
-
-  //   if (event.target.name === "phone") {
-  //     setPhone(event.target.value);
-  //   }
-  // };
 
   const handleFormChange = (event: any) => {
     let nome = event.target.name;
