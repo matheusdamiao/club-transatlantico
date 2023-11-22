@@ -162,7 +162,7 @@ const HeroSectionHome = () => {
         ></video>
         <div className="px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
           <div className="lg:max-w-4xl max-w-[80%] w-full h-min flex flex-col lg:block">
-            <span className="lg:text-6xl leading-tight text-5xl font-body ">
+            <span className="lg:text-6xl leading-tight text-[48px] font-body ">
               Entre o Brasil e a Europa, somos um elo de
             </span>
             <span className={`text-5xl lg:text-6xl`}>
