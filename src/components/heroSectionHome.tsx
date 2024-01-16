@@ -12,6 +12,8 @@ import Aos from "aos";
 import people from "./../assets/images/people-icon.svg";
 import msg from "./../assets/images/msg-icon-l.svg";
 import useWindowDimensions from "../utils/useWindownDimensions";
+import heroPosterMobile from "./../assets/images/hero-mobile-home-poster.webp";
+import heroPosterDesk from "./../assets/images/hero-desk-home-poster.webp";
 
 const HeroSectionHome = () => {
   const size = useWindowDimensions();
@@ -42,7 +44,7 @@ const HeroSectionHome = () => {
         href="#topo"
         className={`${
           isBottom ? "block" : "hidden"
-        } bg-[#2B2B2B] flex items-center justify-center text-3xl  rounded-xl px-2 bottom-10 right-4 animate-bounce  fixed text-[#FFCC00]`}
+        } bg-[#2B2B2B] flex items-center justify-center text-xl  rounded-xl px-4 py-2 bottom-10 right-4 animate-bounce  fixed text-[#FFCC00]`}
       >
         ^
       </a>
@@ -151,6 +153,7 @@ const HeroSectionHome = () => {
           muted
           loop
           src={hero}
+          poster={heroPosterDesk}
           className="hidden lg:block"
         ></video>
         <video
@@ -158,6 +161,7 @@ const HeroSectionHome = () => {
           muted
           loop
           src={`${heroMobile}`}
+          poster={heroPosterMobile}
           className="block w-full lg:hidden min-h-[80vh] opacity-70"
         ></video>
         <div className="px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
