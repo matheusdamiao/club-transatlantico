@@ -39,7 +39,7 @@ const FooterSection = () => {
             <p className="mt-8 text-[#B1B1B1]">
               Segunda-feira à sexta-feira: 12:00 às 18:00
             </p>
-            <p className="text-[#B1B1B1]">Terça-feira: 12:00 às 22:00</p>
+            {/* <p className="text-[#B1B1B1]">Terça-feira: 12:00 às 22:00</p> */}
             <p className="text-[#B1B1B1]">
               Sábados, Domingos e feriados: fechado
             </p>
