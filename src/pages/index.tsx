@@ -9,6 +9,7 @@ import FooterSection from "../components/footerSection";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import SEO from "../components/seo";
+import AgendaSectionHome from "../components/agendaSectionHome";
 
 const IndexPage: React.FC<PageProps> = () => {
   React.useEffect(() => {
@@ -20,6 +21,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <HeroSectionHome />
       <ClubSectionHome />
       <AboutSectionHome />
+      <AgendaSectionHome/>
       <FormSection />
       <SocialSection />
       <FooterSection />

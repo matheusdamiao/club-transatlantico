@@ -48,7 +48,7 @@ const HeroSectionHome = () => {
       >
         ^
       </a>
-      <div className="bg-black relative">
+      <div className="bg-black relative h-[95svh] lg:h-full">
         <div
           className={`w-full h-16 lg:h-20 ${
             menuHeight > 400 ? "bg-cinza/30" : "bg-transparent"
@@ -162,7 +162,7 @@ const HeroSectionHome = () => {
           loop
           src={`${heroMobile}`}
           poster={heroPosterMobile}
-          className="block w-full lg:hidden min-h-[80vh] opacity-70"
+          className="block w-full lg:hidden object-cover h-full min-h-[80vh] opacity-70"
         ></video>
         <div className="px-11 w-full absolute bottom-0 top-0 pt-[20vh] lg:top-1/3 lg:bottom-[10%] flex flex-col justify-between text-white">
           <div className="lg:max-w-4xl max-w-[80%] w-full h-min flex flex-col lg:block">
