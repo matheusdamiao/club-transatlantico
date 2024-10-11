@@ -82,6 +82,9 @@ const FooterSection = () => {
             <a className="text-[#B1B1B1]" href="#contato">
               Contato
             </a>
+            <a className="text-[#B1B1B1]" href="/#agenda">
+              Agenda
+            </a>
           </div>
         </div>
         {/*  */}
