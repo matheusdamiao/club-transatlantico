@@ -29,7 +29,7 @@ const AgendaSectionHome = () => {
                     </div>
                 </div>
             </div>
-
+{/* 
             <div  data-aos="fade-down" data-aos-once="true"  className='flex h-full lg:h-[130px] max-w-[850px] w-full lg:flex-row flex-col'>
                 <div className='flex flex-col bg-[#FFCC00] lg:w-[150px] items-center gap-4 justify-center p-10'>
                     <p className='font-black text-[50px] leading-[20px]'>23</p>
@@ -45,7 +45,7 @@ const AgendaSectionHome = () => {
                         <p> 19h - Quarta-feira - 23/10/2024</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div  data-aos="fade-down" data-aos-once="true"  className='flex h-full lg:h-[150px] max-w-[850px] w-full lg:flex-row flex-col'>
                 <div className='flex flex-col bg-[#FFCC00] lg:w-[150px] items-center gap-4 justify-center p-10'>
