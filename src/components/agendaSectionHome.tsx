@@ -32,7 +32,7 @@ const AgendaSectionHome = () => {
               Fique por dentro do eventos que acontecem no Club Transatlântico
             </p>
           </div>
-          <button className="flex mt-4 lg:mt-0 gap-2 hover:bg-gray-300 transition-all delay-[30ms] rounded-sm p-2 sm:absolute right-0 top-0 items-center text-sm lg:text-lg font-medium text-[#4F4F4F]">
+          <button className="flex mt-4 lg:mt-0 gap-2 hove:rbg-gray-300 transition-all delay-[30ms] rounded-sm p-2 sm:absolute right-0 top-0 items-center text-sm lg:text-lg font-medium text-[#4F4F4F]">
             VER TODOS
             <img src={arrow} />
           </button>
@@ -72,8 +72,8 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
-                target="_blank"
+                href="/evento/geopolitica-em-transicao"
+                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
               >
                 Saiba mais
               </a>

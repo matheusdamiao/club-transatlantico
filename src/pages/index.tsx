@@ -21,7 +21,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <HeroSectionHome />
       <ClubSectionHome />
       <AboutSectionHome />
-      <AgendaSectionHome/>
+      <AgendaSectionHome />
       <FormSection />
       <SocialSection />
       <FooterSection />
