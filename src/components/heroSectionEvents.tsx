@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import hero from "./../assets/videos/video-full-about.mp4";
-import heroMobile from "./../assets/videos/Germany - SHORT TRAVEL FILM. Vertical video ｜ .mp4";
+
 import logo from "./../assets/images/club-logo-b-r.png";
 import logoBranco from "./../assets/images/Logo_branco.png";
 import yellowArch from "./../assets/images/yellow-arch.png";
 import grayArch from "./../assets/images/gray-arch.png";
 import redArch from "./../assets/images/red-arch.png";
-import { TypeAnimation } from "react-type-animation";
 import Aos from "aos";
 import useWindowDimensions from "../utils/useWindownDimensions";
 import home from "./../assets/images/home-icon.svg";
@@ -14,7 +12,19 @@ import msg from "./../assets/images/msg-icon-l.svg";
 import heroMobilePoster from "./../assets/images/hero-mobile-about-poster.webp";
 import heroDeskPoster from "./../assets/images/hero-desk-about-poster.webp";
 
-const HeroSectionEvents = () => {
+type HeroEventProps = {
+  imageDesktop: string;
+  imageMobile: string;
+  desktopImagePosition?: string;
+  mobileImagePosition?: string;
+};
+
+const HeroSectionEvents = ({
+  imageDesktop,
+  imageMobile,
+  desktopImagePosition,
+  mobileImagePosition,
+}: HeroEventProps) => {
   const size = useWindowDimensions();
   const [menuHeight, setMenuHeight] = useState(0);
   const [isBottom, setIsBottom] = useState(false);
@@ -45,7 +55,7 @@ const HeroSectionEvents = () => {
       >
         ^
       </a>
-      <div className="bg-black relative">
+      <div className="bg-black">
         <div
           className={`w-full h-16 lg:h-20 ${
             menuHeight > 400 ? "bg-cinza/30" : "bg-transparent"
@@ -149,26 +159,16 @@ const HeroSectionEvents = () => {
             </ul>
           </nav>
         </div>
-        {/* <video
-          autoPlay
-          muted
-          loop
-          src={hero}
-          poster={heroDeskPoster}
-          className="hidden lg:block w-full opacity-70"
-        ></video>
-        <video
-          autoPlay
-          muted
-          loop
-          poster={heroMobilePoster}
-          src={`${heroMobile}#t=12`}
-          className="block w-full lg:hidden  min-h-[85vh] opacity-70"
-        ></video> */}
+        <img
+          src={imageDesktop}
+          class={`hidden lg:block w-full opacity-70 h-[600px] object-cover ${desktopImagePosition} `}
+        />
+        <img
+          src={imageMobile}
+          className={`lg:hidden w-full h-[700px] opacity-70 object-cover object-center ${mobileImagePosition}`}
+        />
 
-        {/* TODO: add hero imagem   */}
-
-        <div
+        {/* <div
           data-aos="fade-down"
           data-aos-delay="500"
           data-aos-once="false"
@@ -180,7 +180,7 @@ const HeroSectionEvents = () => {
           <img src={redArch} alt="" />
           <img src={yellowArch} alt="" />
           <img src={grayArch} alt="" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import arrow from "./../assets/images/arrow-right-thin.svg";
 import fototimeline from "./../assets/images/timeline-foto-home.png";
 import trumpEvent from "./../assets/images/eventos/geopolitica-maio.png";
-import robotic from "./../assets/images/eventos/robotica-marco.png";
+import robotic from "./../assets/images/eventos/robotica-abril.png";
 import marketingia from "./../assets/images/eventos/marketing-ia-marco.png";
 
 const AgendaSectionHome = () => {
@@ -72,7 +72,7 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="/evento/geopolitica-em-transicao"
+                href="/eventos/geopolitica-em-transicao"
                 // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
               >
                 Saiba mais
@@ -113,8 +113,8 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
-                target="_blank"
+                href="/eventos/robotica-e-ia-sem-misterio"
+                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
               >
                 Saiba mais
               </a>
@@ -153,8 +153,8 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
-                target="_blank"
+                href="/eventos/o-futuro-dos-eventos"
+                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
               >
                 Saiba mais
               </a>
