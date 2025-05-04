@@ -29,9 +29,9 @@ const IndexPage: React.FC<PageProps> = () => {
       />
       <div class="lg:pt-10 lg:pb-20 pt-6 px-11 flex flex-col max-w-[1400px] m-auto relative">
         <div class="flex gap-2  lg:text-base text-xs text-gray-700">
-          <a>Home </a>
+          <a href="/">Home </a>
           <span>{">"}</span>
-          <a> Eventos </a>
+          <a href="/eventos"> Eventos </a>
           <span>{">"}</span>
           <a className="font-bold"> Eleições Federais Alemãs 2025 </a>
         </div>
@@ -42,13 +42,13 @@ const IndexPage: React.FC<PageProps> = () => {
           <h1 class="lg:text-5xl text-4xl font-bold pb-[9px] ">2025</h1>
         </div>
         <div class="lg:pt-4 pt-4 flex gap-16">
-          <a className="flex gap-3 font-medium pt-2 text-gray-800">
+          <a
+            target="_blank"
+            href="https://www.sympla.com.br/evento/eleicoes-federais-alemas-2025/2826502"
+            className="flex gap-3 font-medium pt-2 text-gray-800"
+          >
             <img src={link} alt="icon" className="w-[16px]" />
-            Link do evento no Sympla
-          </a>
-          <a className="flex gap-3 font-medium pt-2 text-gray-800">
-            <img src={shareLink} alt="icon" className="w-[20px]" />
-            Compartilhe este evento
+            Link para evento no Sympla
           </a>
         </div>
         <div class="pt-6">
@@ -113,6 +113,13 @@ const IndexPage: React.FC<PageProps> = () => {
               desdobramentos das eleições em um encontro enriquecedor.
             </p>
             <br />
+            <a
+              target="_blank"
+              className="underline text-blue-600 pt-2"
+              href="https://www.sympla.com.br/evento/eleicoes-federais-alemas-2025/2826502"
+            >
+              Link do evento no Sympla
+            </a>
           </div>
         </div>
         <div
@@ -139,4 +146,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <SEO />;
+export const Head: HeadFC = () => (
+  <SEO title="Eleições Federais Alemãs 2025" og={imageMobile} />
+);

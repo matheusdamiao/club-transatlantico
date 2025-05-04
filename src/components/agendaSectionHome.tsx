@@ -63,8 +63,8 @@ const AgendaSectionHome = () => {
                 Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
                 Desafios para Brasil e Europa na Era Trump
               </h5>
-              <div class="bg-red-700 border-2 border-gray-400 text-white text-[9px] w-fit rounded-[12px] py-2 px-4">
-                PRESENCIAL
+              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
                 <img src={schedule} alt="icon" /> 06 mai - 2025 • 19:00 às 22:00
@@ -104,8 +104,8 @@ const AgendaSectionHome = () => {
                 Robótica e IA Sem Mistério | Traduções que Trazem o Futuro para
                 o Presente
               </h5>
-              <div class="bg-red-700 border-2 border-gray-400 text-white text-[9px] w-fit rounded-[12px] py-2 px-4">
-                PRESENCIAL
+              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
                 <img src={schedule} alt="icon" /> 24 abr - 2025 • 18:00 às 21:00
@@ -207,14 +207,14 @@ const AgendaSectionHome = () => {
         data-aos="fade-down"
         data-aos-once="true"
         alt=""
-        className="absolute right-[-250px] top-[30vh] lg:block hidden"
+        className="absolute right-[-100px] !opacity-60 top-[50vh] lg:block hidden"
       />
       <img
         src={bigRedArch}
         data-aos="fade-down"
         data-aos-once="true"
         alt=""
-        className="absolute left-[-360px] top-0 lg:block hidden"
+        className="absolute left-[-160px] !opacity-60 top-0 lg:block hidden"
       />
     </div>
   );

@@ -29,9 +29,9 @@ const IndexPage: React.FC<PageProps> = () => {
       />
       <div class="lg:pt-10 lg:pb-20 pt-6 px-11 flex flex-col max-w-[1400px] m-auto relative">
         <div class="flex gap-2  lg:text-base text-xs text-gray-700">
-          <a>Home </a>
+          <a href="/">Home </a>
           <span>{">"}</span>
-          <a> Eventos </a>
+          <a href="/eventos"> Eventos </a>
           <span>{">"}</span>
           <a className="font-bold"> Geopolítica em Transição </a>
         </div>
@@ -40,14 +40,18 @@ const IndexPage: React.FC<PageProps> = () => {
           para Brasil e Europa na Era Trump
         </h1>
         <div class="lg:pt-4 pt-4 flex gap-6 lg:gap-16 items-center">
-          <a className="flex gap-3 font-medium pt-2 text-gray-800">
+          <a
+            target="_blank"
+            href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+            className="flex gap-3 font-medium pt-2 text-gray-800"
+          >
             <img src={link} alt="icon" className="w-[16px]" />
-            Link do evento no Sympla
+            Link para o evento no Sympla
           </a>
-          <a className="flex gap-3 font-medium pt-2 text-gray-800 items-center">
+          {/* <a className="flex gap-3 font-medium pt-2 text-gray-800 items-center">
             <img src={shareLink} alt="icon" className="w-[20px]" />
             Compartilhe este evento
-          </a>
+          </a> */}
         </div>
         <div class="pt-6">
           <small>Publicado em 03 de maio de 2025</small>
@@ -115,6 +119,14 @@ const IndexPage: React.FC<PageProps> = () => {
               Um ambiente pensado para troca qualificada e conexão entre
               tomadores de decisão.
             </p>
+
+            <a
+              target="_blank"
+              className="underline text-blue-600 pt-2"
+              href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+            >
+              Link do evento no Sympla
+            </a>
           </div>
         </div>
         <div

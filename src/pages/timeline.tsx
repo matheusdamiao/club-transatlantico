@@ -73,7 +73,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <HeroSectionEvents
         opacity={"opacity-40"}
-        paddingTopHeroText="pt-[150px]"
+        paddingTopHeroText="!pt-[150px]"
         heroSize="h-[400px]"
         // imageDesktop={imageDesktop}
         // imageMobile={imageMobile}
@@ -97,7 +97,7 @@ const IndexPage: React.FC<PageProps> = () => {
           Décadas de tradição, cultura e conexão — um passeio pelos eventos que
           moldaram o nosso clube.
         </h2>
-        <h3 className="text-4xl font-bold pt-12 px-11">2025</h3>
+        <h3 className="text-4xl font-bold pt-16 lg:pt-24 pl-5">2025</h3>
         <div className="h-full mt-8 pl-4">
           <div class="flex items-center gap-4">
             <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
@@ -248,4 +248,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <SEO />;
+export const Head: HeadFC = () => (
+  <SEO
+    title="Timeline do Club Transatlântico"
+    description="Descubra os momentos que definiram nossa trajetória e conectaram culturas."
+  />
+);

@@ -169,7 +169,7 @@ const HeroSectionEvents = ({
         </div>
         <img
           src={imageDesktop}
-          class={`hidden lg:block w-full opacity-70 h-[600px] object-cover ${desktopImagePosition} ${opacity}`}
+          className={`hidden lg:block w-full opacity-70 h-[600px] object-cover ${desktopImagePosition} ${opacity}`}
         />
         <img
           src={imageMobile}
@@ -180,8 +180,8 @@ const HeroSectionEvents = ({
         >
           <div className="lg:max-w-[50%] w-full h-min flex flex-col lg:block">
             <span
-              className={`lg:text-6xl leading-tight text-[48px] font-body ${
-                heroSize && "text-[36px]"
+              className={`lg:text-6xl leading-tight text-[48px] font-body font-bold ${
+                heroSize && "!text-[36px]"
               }`}
             >
               {heroText}

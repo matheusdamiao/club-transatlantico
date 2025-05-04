@@ -141,7 +141,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <HeroSectionEvents
-        opacity={"opacity-40"}
+        opacity={"!opacity-40"}
         imageDesktop={imageDesktop}
         imageMobile={imageMobile}
         mobileImagePosition="object-[60%_70%]"
@@ -179,14 +179,14 @@ const IndexPage: React.FC<PageProps> = () => {
                   Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
                   Desafios para Brasil e Europa na Era Trump
                 </h5>
-                <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
                   Presencial
                 </div>
                 <p className="flex gap-3 font-medium pt-2 text-gray-800">
                   <img src={schedule} alt="icon" /> 06 de Maio de 2025 • 19h às
                   22h
                 </p>
-                <div class="flex gap-2 font-medium pt-2 text-sm items-center ">
+                <div className="flex gap-2 font-medium pt-2 text-sm items-center ">
                   <img src={location} alt="icon" className="self-start pt-1" />
                   <p className="text-gray-800">
                     Blue Tree Transatlântico Convention Center / Club
@@ -222,7 +222,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 Robótica e IA Sem Mistério | Traduções que Trazem o Futuro para
                 o Presente
               </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
                 Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
@@ -262,7 +262,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <h5 className="font-title text-xl ">
                 O Futuro dos Eventos e Live Marketing com IA - Com Colja Dams
               </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
                 Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
@@ -299,9 +299,9 @@ const IndexPage: React.FC<PageProps> = () => {
                 />
               </div>
 
-              <h5 class="font-title text-xl">Eleições Federais Alemãs </h5>
-              <h5 class="font-extrabold text-xl">2025</h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+              <h5 className="font-title text-xl">Eleições Federais Alemãs </h5>
+              <h5 className="font-extrabold text-xl">2025</h5>
+              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
                 Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
@@ -328,11 +328,11 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
 
-        <h1 class="lg:text-5xl text-4xl lg:leading-tight font-bold pt-32 font-title max-w-[1000px]">
+        <h1 className="lg:text-5xl text-4xl lg:leading-tight font-bold pt-32 font-title max-w-[1000px]">
           Todos os Eventos
         </h1>
 
-        <div className="flex gap-4 pt-8">
+        <div className="flex flex-wrap gap-4 pt-8">
           <select name="mês" value={selectedMonth} onChange={handleMonthChange}>
             <option value="">Todos</option>
             <option value="Janeiro">Janeiro</option>
@@ -348,7 +348,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </select>
           <div>
             <input
-              class="bg-gray-200 pr-3 p-2 rounded-[12px]"
+              className="bg-gray-200 pr-3 p-2 rounded-[12px]"
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
@@ -360,7 +360,10 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
 
-        <div id="cards-wrapper" class="flex flex-wrap gap-16 lg:gap-24 pt-12">
+        <div
+          id="cards-wrapper"
+          className="flex flex-wrap gap-16 lg:gap-24 pt-12"
+        >
           {filteredEvents.map((event) => (
             <div
               key={event.id}
@@ -409,7 +412,7 @@ const IndexPage: React.FC<PageProps> = () => {
         data-aos-delay="500"
         data-aos-once="false"
         data-aos-duration="500"
-        class="hidden flex-col absolute right-0 top-[30vh] overflow-hidden lg:flex"
+        className="hidden flex-col absolute right-0 top-[30vh] overflow-hidden lg:flex"
       >
         <img src={yellowArch} alt="" />
         <img src={grayArch} alt="" />
@@ -426,4 +429,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <SEO />;
+export const Head: HeadFC = () => (
+  <SEO title="Eventos do Club Transatlântico" og={imageMobile} />
+);
