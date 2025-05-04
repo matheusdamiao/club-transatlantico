@@ -17,6 +17,8 @@ type HeroEventProps = {
   imageMobile: string;
   desktopImagePosition?: string;
   mobileImagePosition?: string;
+  opacity?: string;
+  heroText?: string;
 };
 
 const HeroSectionEvents = ({
@@ -24,6 +26,8 @@ const HeroSectionEvents = ({
   imageMobile,
   desktopImagePosition,
   mobileImagePosition,
+  opacity,
+  heroText,
 }: HeroEventProps) => {
   const size = useWindowDimensions();
   const [menuHeight, setMenuHeight] = useState(0);
@@ -32,7 +36,7 @@ const HeroSectionEvents = ({
   useEffect(() => {
     if (size !== undefined) {
       setMenuHeight(size.scrollY);
-      console.log(size.scrollY);
+      // console.log(size.scrollY);;
       if (size?.scrollY >= 5000) {
         setIsBottom(true);
       }
@@ -161,13 +165,20 @@ const HeroSectionEvents = ({
         </div>
         <img
           src={imageDesktop}
-          class={`hidden lg:block w-full opacity-70 h-[600px] object-cover ${desktopImagePosition} `}
+          class={`hidden lg:block w-full opacity-70 h-[600px] object-cover ${desktopImagePosition} ${opacity}`}
         />
         <img
           src={imageMobile}
-          className={`lg:hidden w-full h-[700px] opacity-70 object-cover object-center ${mobileImagePosition}`}
+          className={`lg:hidden w-full h-[700px] opacity-70 object-cover object-center ${mobileImagePosition} ${opacity}`}
         />
-
+        <div className="px-11 w-full absolute bottom-0 top-0 pt-[35vh] lg:top-3/2 lg:bottom-[10%] flex flex-col justify-between text-white">
+          <div className="lg:max-w-[50%] w-full h-min flex flex-col lg:block">
+            <span className="lg:text-6xl leading-tight text-[48px] font-body ">
+              {heroText}
+            </span>
+            <span className={`text-5xl lg:text-6xl`}></span>
+          </div>
+        </div>
         {/* <div
           data-aos="fade-down"
           data-aos-delay="500"
