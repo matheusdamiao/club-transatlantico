@@ -103,7 +103,7 @@ const FooterSection = () => {
       </div>
       <div className="pt-6 lg:px-20 lg:py-6 flex items-center gap-6 lg:justify-between justify-center flex-wrap ">
         <small className="text-center">
-          Club Transatlântico - 2023 - Todos os direitos reservados
+          Club Transatlântico - 2025 - Todos os direitos reservados
         </small>
         <small className="text-center pb-2 text-xs text-gray-500 hover:text-gray-300 transition-all">
           <span className="hover:animate-pulse hover:cursor-help">Design</span>{" "}
