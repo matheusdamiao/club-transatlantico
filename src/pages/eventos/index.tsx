@@ -47,7 +47,7 @@ const IndexPage: React.FC<PageProps> = () => {
       location:
         "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
       image: roboticaIA,
-      link: "/eventos/robotica-e-ia",
+      link: "/eventos/robotica-e-ia-sem-misterio",
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ const IndexPage: React.FC<PageProps> = () => {
       location:
         "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
       image: marketingia,
-      link: "/eventos/marketing-ia",
+      link: "/eventos/o-futuro-dos-eventos",
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ const IndexPage: React.FC<PageProps> = () => {
       location:
         "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
       image: eleicoes2025,
-      link: "/eventos/eleicoes-2025",
+      link: "/eventos/eleicoes-federais-alemas-2025",
     },
   ];
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -141,7 +141,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <HeroSectionEvents
-        opacity={"opacity-30"}
+        opacity={"opacity-40"}
         imageDesktop={imageDesktop}
         imageMobile={imageMobile}
         mobileImagePosition="object-[60%_70%]"
@@ -150,7 +150,7 @@ const IndexPage: React.FC<PageProps> = () => {
       />
       <div class="lg:pt-10 lg:pb-20 pt-6 px-11 flex  flex-col max-w-[1400px] m-auto relative">
         <div class="flex gap-2  lg:text-base text-xs text-gray-700">
-          <a>Home </a>
+          <a href="/">Home </a>
           <span>{">"}</span>
           <a>
             {" "}
@@ -161,7 +161,7 @@ const IndexPage: React.FC<PageProps> = () => {
           Últimos Eventos
         </h1>
 
-        <div id="cards-wrapper" class="flex flex-wrap gap-8 pt-12">
+        <div id="cards-wrapper" class="flex flex-wrap gap-16 lg:gap-8 pt-12">
           <div
             id="card"
             className="flex flex-col w-full h-full justify-between pb-12"
@@ -239,7 +239,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/geopolitica-em-transicao"
+                  href="/eventos/robotica-e-ia-sem-misterio"
                   // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
                 >
                   Saiba mais
@@ -278,7 +278,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/geopolitica-em-transicao"
+                  href="/eventos/o-futuro-dos-eventos"
                   // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
                 >
                   Saiba mais
@@ -318,7 +318,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/geopolitica-em-transicao"
+                  href="/eventos/eleicoes-federais-alemas-2025"
                   // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
                 >
                   Saiba mais
@@ -360,7 +360,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
 
-        <div id="cards-wrapper" class="flex flex-wrap gap-8 pt-12">
+        <div id="cards-wrapper" class="flex flex-wrap gap-16 lg:gap-24 pt-12">
           {filteredEvents.map((event) => (
             <div
               key={event.id}
@@ -392,9 +392,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   <div className="flex">
                     <a
                       className="py-2 mt-2 px-4 text-[16px] w-full lg:w-[60%] text-center bg-white border-[1px] border-black rounded-[12px]"
-                      href={`/eventos/${event.title
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
+                      href={`${event.link}`}
                     >
                       Saiba mais
                     </a>

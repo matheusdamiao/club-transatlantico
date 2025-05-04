@@ -8,14 +8,19 @@ import fototimeline from "./../assets/images/timeline-foto-home.png";
 import trumpEvent from "./../assets/images/eventos/geopolitica-maio.png";
 import robotic from "./../assets/images/eventos/robotica-abril.png";
 import marketingia from "./../assets/images/eventos/marketing-ia-marco.png";
+import bigYellowArch from "./../assets/images/yellow-big-arch.png";
+import bigRedArch from "./../assets/images/red-big-arch.png";
 
 const AgendaSectionHome = () => {
   React.useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
   return (
-    <div id="agenda" className="max-w-[1400px] mx-auto w-full my-[100px] px-11">
-      <section className="flex flex-col mt-14 gap-6">
+    <div
+      id="agenda"
+      className="max-w-[1400px] mx-auto w-full my-[100px] px-11 relative"
+    >
+      <section className="flex flex-col mt-14 gap-6 relative z-40">
         <div className="flex  lg:flex-row flex-col justify-between lg:items-center relative">
           <div className="flex flex-col gap-6">
             <h3
@@ -166,7 +171,7 @@ const AgendaSectionHome = () => {
         </div>
       </section>
 
-      <section className="flex flex-col mt-24 gap-6 bg-black text-white px-8 py-10 rounded-[12px]">
+      <section className="flex flex-col mt-24 z-40 relative gap-6 bg-black text-white px-8 py-10 rounded-[12px]">
         <div className="flex flex-wrap justify-between items-center relative w-full">
           <div className="flex flex-col gap-6">
             <h3
@@ -183,7 +188,7 @@ const AgendaSectionHome = () => {
               Descubra os eventos que moldaram a história do Club Transatlântico
             </p>
             <a
-              href="/sobre#t"
+              href="/timeline"
               className=" text-center bg-amarelo px-8 py-3 max-w-sm text-black rounded-xl font-title hover:scale-105 transition-all"
             >
               Ver Timeline
@@ -196,6 +201,21 @@ const AgendaSectionHome = () => {
           />
         </div>
       </section>
+
+      <img
+        src={bigYellowArch}
+        data-aos="fade-down"
+        data-aos-once="true"
+        alt=""
+        className="absolute right-[-250px] top-[30vh] lg:block hidden"
+      />
+      <img
+        src={bigRedArch}
+        data-aos="fade-down"
+        data-aos-once="true"
+        alt=""
+        className="absolute left-[-360px] top-0 lg:block hidden"
+      />
     </div>
   );
 };

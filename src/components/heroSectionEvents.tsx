@@ -19,6 +19,8 @@ type HeroEventProps = {
   mobileImagePosition?: string;
   opacity?: string;
   heroText?: string;
+  heroSize?: string;
+  paddingTopHeroText?: string;
 };
 
 const HeroSectionEvents = ({
@@ -28,6 +30,8 @@ const HeroSectionEvents = ({
   mobileImagePosition,
   opacity,
   heroText,
+  heroSize,
+  paddingTopHeroText,
 }: HeroEventProps) => {
   const size = useWindowDimensions();
   const [menuHeight, setMenuHeight] = useState(0);
@@ -59,7 +63,7 @@ const HeroSectionEvents = ({
       >
         ^
       </a>
-      <div className="bg-black">
+      <div className={`bg-black ${heroSize}`}>
         <div
           className={`w-full h-16 lg:h-20 ${
             menuHeight > 400 ? "bg-cinza/30" : "bg-transparent"
@@ -171,9 +175,15 @@ const HeroSectionEvents = ({
           src={imageMobile}
           className={`lg:hidden w-full h-[700px] opacity-70 object-cover object-center ${mobileImagePosition} ${opacity}`}
         />
-        <div className="px-11 w-full absolute bottom-0 top-0 pt-[35vh] lg:top-3/2 lg:bottom-[10%] flex flex-col justify-between text-white">
+        <div
+          className={`px-11 w-full absolute bottom-0 top-0 pt-[35vh] ${paddingTopHeroText} lg:top-3/2 lg:bottom-[10%] flex flex-col justify-between text-white`}
+        >
           <div className="lg:max-w-[50%] w-full h-min flex flex-col lg:block">
-            <span className="lg:text-6xl leading-tight text-[48px] font-body ">
+            <span
+              className={`lg:text-6xl leading-tight text-[48px] font-body ${
+                heroSize && "text-[36px]"
+              }`}
+            >
               {heroText}
             </span>
             <span className={`text-5xl lg:text-6xl`}></span>

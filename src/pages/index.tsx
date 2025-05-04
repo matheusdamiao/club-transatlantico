@@ -17,7 +17,7 @@ const IndexPage: React.FC<PageProps> = () => {
   }, []);
 
   return (
-    <main>
+    <main className="overflow-hidden">
       <HeroSectionHome />
       <ClubSectionHome />
       <AboutSectionHome />
