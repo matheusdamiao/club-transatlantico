@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import arrow from "./../assets/images/arrow-right-thin.svg";
 import fototimeline from "./../assets/images/timeline-foto-home.png";
 import trumpEvent from "./../assets/images/eventos/geopolitica-maio.png";
+import coquetelAniversario from "./../assets/images/eventos/coquetel-aniversario-club.png";
+
 import robotic from "./../assets/images/eventos/robotica-abril.png";
 import marketingia from "./../assets/images/eventos/marketing-ia-marco.png";
 import bigYellowArch from "./../assets/images/yellow-big-arch.png";
@@ -47,6 +49,44 @@ const AgendaSectionHome = () => {
         </div>
 
         <div className="flex flex-wrap xl:flex-nowrap gap-24 lg:gap-12  items-center pt-6">
+          <div
+            id="card"
+            className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px] justify-between"
+          >
+            <div className="h-full flex flex-col gap-2">
+              <div className="w-full">
+                <img
+                  src={coquetelAniversario}
+                  alt=""
+                  className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
+                />
+              </div>
+              <h5 className="font-extrabold text-xl ">
+                Coquetel de 71º Aniversário do Club Transatlântico
+              </h5>
+              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Presencial
+              </div>
+              <p className="flex gap-3 font-medium pt-2 text-gray-800">
+                <img src={schedule} alt="icon" /> 27 mai - 2025 • 17:30 às 20:30
+              </p>
+              <div className="flex gap-2 font-medium pt-2 text-sm ">
+                <img src={location} alt="icon" className="self-start pt-1" />
+                <p className="text-gray-800">
+                  Blue Tree Transatlântico Convention Center / Club
+                  Transatlântico , São Paulo - SP
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <a
+                className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
+                href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
+              >
+                Saiba mais
+              </a>
+            </div>
+          </div>
           <div
             id="card"
             className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px] justify-between"
@@ -128,46 +168,6 @@ const AgendaSectionHome = () => {
               </a>
             </div>
           </div>
-
-          <div
-            id="card"
-            className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px] justify-between"
-          >
-            <div className="h-full flex flex-col gap-2">
-              <div className="w-full">
-                <img
-                  src={marketingia}
-                  alt=""
-                  className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
-                />
-              </div>
-              <h5 className="font-title text-xl ">
-                O Futuro dos Eventos e Live Marketing com IA - Com Colja Dams
-              </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
-              </div>
-              <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 25 mar - 2025 • 09:00 às 11:30
-              </p>
-              <div className="flex gap-2 font-medium pt-2 text-sm ">
-                <img src={location} alt="icon" className="self-start pt-1" />
-                <p className="text-gray-800">
-                  Blue Tree Transatlântico Convention Center / Club
-                  Transatlântico , São Paulo - SP
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <a
-                className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="/eventos/o-futuro-dos-eventos"
-                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
-              >
-                Saiba mais
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -183,6 +183,7 @@ const AgendaSectionHome = () => {
             </h3>
             <p
               data-aos="fade-down"
+              data-aos-once="true"
               className="font-light lg:text-2xl text-xl text-left w-full max-w-[458px]"
             >
               Descubra os eventos que moldaram a história do Club Transatlântico

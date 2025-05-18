@@ -101,6 +101,23 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="h-full mt-8 pl-4">
           <div class="flex items-center gap-4">
             <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
+              <p className="text-3xl font-bold text-center">27</p>
+              <p className="text-lg font-bold">Maio</p>
+              <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
+              <div class="absolute left-[110px] lg:left-[150px]  w-[200px] min-[400px]:w-[250px] min-[500px]:w-[300px] sm:w-[500px] lg:w-[700px] flex gap-2 items-center">
+                <a
+                  href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
+                  class="text-[#2b2b2b] text-lg lg:text-2xl hover:underline hover:text-gray-900 transition-all"
+                >
+                  Coquetel de 71º Aniversário do Club Transatlântico
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-full mt-[54px] pl-4">
+          <div class="flex items-center gap-4">
+            <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
               <p className="text-3xl font-bold">6</p>
               <p className="text-lg font-bold">Maio</p>
               <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
@@ -167,63 +184,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </div>
-        </div>{" "}
-        {/* <div class="h-full mt-[54px]">
-          <div class="flex items-center gap-4">
-            <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
-              <p className="text-3xl font-bold">13</p>
-              <p className="text-lg font-bold">Nov</p>
-              <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
-              <div className="absolute left-[110px] lg:left-[150px] w-[250px] lg:w-[700px]  flex gap-2 items-center">
-                <p class="text-[#2b2b2b] text-lg lg:text-2xl">
-                  Robótica e IA Sem Mistério
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* <div id="cards-wrapper" class="flex flex-wrap gap-16 lg:gap-24 pt-12">
-          {allEvents.map((event) => (
-            <div
-              key={event.id}
-              id="card"
-              className="flex flex-col w-full h-full justify-between"
-            >
-              <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
-                <div className="lg:w-full max-w-[700px] lg:h-[300px]">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="object-cover lg:w-full h-full"
-                  />
-                </div>
-                <div className="flex  flex-col gap-2">
-                  <h5 className="font-title text-3xl">{event.title}</h5>
-                  <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                    <img src={schedule} alt="icon" /> {event.date} •{" "}
-                    {event.time}
-                  </p>
-                  <p className="text-gray-800 flex gap-2">
-                    <img
-                      src={location}
-                      alt="icon"
-                      className="self-start pt-1"
-                    />
-                    {event.location}
-                  </p>
-                  <div className="flex">
-                    <a
-                      className="py-2 mt-2 px-4 text-[16px] w-full lg:w-[60%] text-center bg-white border-[1px] border-black rounded-[12px]"
-                      href={`${event.link}`}
-                    >
-                      Saiba mais
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
+        </div>
       </div>
       {/* ARCOSSSSSS */}
       <div
