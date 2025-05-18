@@ -20,6 +20,7 @@ import location from "./../../assets/images/local-icon.svg";
 import trumpEvent from "./../../assets/images/eventos/geopolitica-maio.png";
 import roboticaIA from "./../../assets/images/eventos/robotica-abril.png";
 import eleicoes2025 from "./../../assets/images/eventos/eleicoes-fevereiro.png";
+import coquetelNiver from "./../../assets/images/eventos/coquetel-aniversario-club.png";
 
 const IndexPage: React.FC<PageProps> = () => {
   React.useEffect(() => {
@@ -29,6 +30,17 @@ const IndexPage: React.FC<PageProps> = () => {
   const events = [
     {
       id: 1,
+      title: "Coquetel de 71º Aniversário do Club Transatlântico",
+      description: "Celebre conosco os 71 anos do Club Transatlântico",
+      date: "27 de Maio de 2025",
+      time: "17h30 às 20h30",
+      location:
+        "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
+      image: coquetelNiver,
+      link: "/eventos/coquetel-de-71-aniversario-do-club-transatlantico",
+    },
+    {
+      id: 2,
       title: "Jantar-Debate com o Prof. HOC - Geopolítica em Transição",
       description: "Desafios para Brasil e Europa na Era Trump.",
       date: "06 de Maio de 2025",
@@ -39,7 +51,7 @@ const IndexPage: React.FC<PageProps> = () => {
       link: "/eventos/geopolitica-em-transicao",
     },
     {
-      id: 2,
+      id: 3,
       title: "Robótica e IA Sem Mistério",
       description: "Traduções que Trazem o Futuro para o Presente.",
       date: "23 de Abril de 2025",
@@ -50,7 +62,7 @@ const IndexPage: React.FC<PageProps> = () => {
       link: "/eventos/robotica-e-ia-sem-misterio",
     },
     {
-      id: 3,
+      id: 4,
       title: "O Futuro dos Eventos e Live Marketing com IA - Com Colja Dams",
       description: "Explorando o impacto da IA no marketing e eventos.",
       date: "25 de Março de 2025",
@@ -61,7 +73,7 @@ const IndexPage: React.FC<PageProps> = () => {
       link: "/eventos/o-futuro-dos-eventos",
     },
     {
-      id: 4,
+      id: 5,
       title: "Eleições Federais Alemãs",
       description: "Discussão sobre o impacto das eleições na Alemanha.",
       date: "23 de Fevereiro de 2025",
@@ -169,26 +181,25 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
               <div className="lg:w-[80%] lg:h-[300px]">
                 <img
-                  src={trumpEvent}
+                  src={coquetelNiver}
                   alt=""
                   className="object-cover lg:w-full h-full"
                 />
               </div>
               <div className=" flex flex-col gap-2">
-                <h5 className="font-title text-3xl ">
-                  Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
-                  Desafios para Brasil e Europa na Era Trump
+                <h5 className="font-extrabold text-3xl ">
+                  Coquetel de 71º Aniversário do Club Transatlântico
                 </h5>
                 <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
                   Presencial
                 </div>
                 <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                  <img src={schedule} alt="icon" /> 06 de Maio de 2025 • 19h às
-                  22h
+                  <img src={schedule} alt="icon" /> 27 mai - 2025 • 17:30 às
+                  20:30
                 </p>
                 <div className="flex gap-2 font-medium pt-2 text-sm items-center ">
                   <img src={location} alt="icon" className="self-start pt-1" />
-                  <p className="text-gray-800">
+                  <p className="text-gray-800 max-w-[350px]">
                     Blue Tree Transatlântico Convention Center / Club
                     Transatlântico , São Paulo - SP
                   </p>
@@ -196,8 +207,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div className="flex">
                   <a
                     className="py-2 mt-2 px-4 text-[16px] w-full lg:w-[60%] text-center bg-white border-[1px] border-black rounded-[12px]"
-                    href="/eventos/geopolitica-em-transicao"
-                    // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+                    href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
                   >
                     Saiba mais
                   </a>
@@ -208,9 +218,50 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div
             id="card"
-            className="flex flex-col w-full xl:max-w-[400px] xl:h-[450px]  justify-between"
+            class="flex flex-col w-full xl:max-w-[400px] xl:h-[500px] justify-between"
           >
-            <div className="h-full flex flex-col gap-2">
+            <div className="h-full flex flex-col gap-2 justify-between">
+              <div className="w-full">
+                <img
+                  src={trumpEvent}
+                  alt=""
+                  className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
+                />
+              </div>
+
+              <h5 className="font-title text-xl">
+                Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
+                Desafios para Brasil e Europa na Era Trump{" "}
+              </h5>
+              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Presencial
+              </div>
+              <p className="flex gap-3 font-medium pt-2 text-gray-800">
+                <img src={schedule} alt="icon" /> 06 de Maio de 2025 • 19h às
+                22h
+              </p>
+              <div className="flex gap-2 font-medium pt-2 text-sm ">
+                <img src={location} alt="icon" className="self-start pt-1" />
+                <p className="text-gray-800">
+                  Blue Tree Transatlântico Convention Center / Club
+                  Transatlântico , São Paulo - SP
+                </p>
+              </div>
+              <div className="flex">
+                <a
+                  className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px] cursor-pointer"
+                  href="/eventos/geopolitica-em-transicao"
+                >
+                  Saiba mais
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card"
+            className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px]  justify-between"
+          >
+            <div className="h-full flex flex-col gap-2 justify-between">
               <div className="w-full">
                 <img
                   src={roboticaIA}
@@ -249,9 +300,9 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
           <div
             id="card"
-            className="flex flex-col w-full xl:max-w-[400px] xl:h-[450px]  justify-between"
+            className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px]  justify-between"
           >
-            <div className="h-full flex flex-col gap-2">
+            <div className="h-full flex flex-col gap-2 justify-between">
               <div className="w-full">
                 <img
                   src={marketingia}
@@ -279,46 +330,6 @@ const IndexPage: React.FC<PageProps> = () => {
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
                   href="/eventos/o-futuro-dos-eventos"
-                  // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
-                >
-                  Saiba mais
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            id="card"
-            className="flex flex-col w-full xl:max-w-[400px] xl:h-[450px] justify-between"
-          >
-            <div className="h-full flex flex-col gap-2">
-              <div className="w-full">
-                <img
-                  src={eleicoes2025}
-                  alt=""
-                  className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
-                />
-              </div>
-
-              <h5 className="font-title text-xl">Eleições Federais Alemãs </h5>
-              <h5 className="font-extrabold text-xl">2025</h5>
-              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
-              </div>
-              <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 23 de fevereiro de 2025 •
-                12:30 às 16:30
-              </p>
-              <div className="flex gap-2 font-medium pt-2 text-sm ">
-                <img src={location} alt="icon" className="self-start pt-1" />
-                <p className="text-gray-800">
-                  Blue Tree Transatlântico Convention Center / Club
-                  Transatlântico , São Paulo - SP
-                </p>
-              </div>
-              <div className="flex">
-                <a
-                  className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/eleicoes-federais-alemas-2025"
                   // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
                 >
                   Saiba mais
@@ -379,7 +390,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   />
                 </div>
                 <div className="flex  flex-col gap-2">
-                  <h5 className="font-title text-3xl">{event.title}</h5>
+                  <h5 className="font-extrabold text-3xl">{event.title}</h5>
                   <p className="flex gap-3 font-medium pt-2 text-gray-800">
                     <img src={schedule} alt="icon" /> {event.date} •{" "}
                     {event.time}
