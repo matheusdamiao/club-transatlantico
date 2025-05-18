@@ -54,7 +54,7 @@ const IndexPage: React.FC<PageProps> = () => {
       id: 3,
       title: "Robótica e IA Sem Mistério",
       description: "Traduções que Trazem o Futuro para o Presente.",
-      date: "23 de Abril de 2025",
+      date: "24 de Abril de 2025",
       time: "18h às 21h",
       location:
         "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
@@ -277,7 +277,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 Presencial
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 23 de abril de 2025 • 18h às
+                <img src={schedule} alt="icon" /> 24 de abril de 2025 • 18h às
                 21h
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
