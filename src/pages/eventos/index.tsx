@@ -21,6 +21,10 @@ import trumpEvent from "./../../assets/images/eventos/geopolitica-maio.png";
 import roboticaIA from "./../../assets/images/eventos/robotica-abril.png";
 import eleicoes2025 from "./../../assets/images/eventos/eleicoes-fevereiro.png";
 import coquetelNiver from "./../../assets/images/eventos/coquetel-aniversario-club.png";
+import sonhos from "./../../assets/images/eventos/significado-dos-sonhos.jpeg";
+import bolao from "./../../assets/images/eventos/bolao-alemao.png";
+import skatalemao from "./../../assets/images/eventos/skat-alemao.png";
+import { title } from "process";
 
 const IndexPage: React.FC<PageProps> = () => {
   React.useEffect(() => {
@@ -28,6 +32,42 @@ const IndexPage: React.FC<PageProps> = () => {
   }, []);
 
   const events = [
+    {
+      id: 7,
+      title: "Primeiro Happy Hour SKAT Alemão Transatlântico",
+      description:
+        "Venha participar do nosso primeiro happy hour com o SKAT alemão!",
+      date: "18 de Junho de 2025",
+      time: "19h às 22h",
+      location:
+        "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
+      image: skatalemao,
+      link: "/eventos/skat-alemao",
+    },
+    {
+      id: 6,
+      title: "Primeiro Happy Hour Bolão Alemão Transatlântico",
+      description:
+        "Venha participar do nosso primeiro happy hour com o bolão alemão!",
+      date: "13 de Junho de 2025",
+      time: "19h às 22h",
+      location:
+        "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
+      image: bolao,
+      link: "/eventos/bolao-alemao",
+    },
+    {
+      id: 0,
+      title: "Qual o Significado de Nossos Sonhos",
+      description:
+        "Descubra o que seus sonhos podem revelar sobre você e sua vida.",
+      date: "09 de Junho de 2025",
+      time: "19h às 22h",
+      location:
+        "Blue Tree Transatlântico Convention Center / Club Transatlântico, São Paulo - SP",
+      image: sonhos,
+      link: "/eventos/significado-dos-sonhos",
+    },
     {
       id: 1,
       title: "Coquetel de 71º Aniversário do Club Transatlântico",
@@ -181,21 +221,21 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
               <div className="lg:w-[80%] lg:h-[300px]">
                 <img
-                  src={coquetelNiver}
+                  src={sonhos}
                   alt=""
                   className="object-cover lg:w-full h-full"
                 />
               </div>
               <div className=" flex flex-col gap-2">
                 <h5 className="font-extrabold text-3xl ">
-                  Coquetel de 71º Aniversário do Club Transatlântico
+                  Qual o Significado de Nossos Sonhos
                 </h5>
-                <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                  Presencial
+                <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                  Próximo evento
                 </div>
                 <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                  <img src={schedule} alt="icon" /> 27 mai - 2025 • 17:30 às
-                  20:30
+                  <img src={schedule} alt="icon" />
+                  09 jun - 2025 • 19:00 às 22:00
                 </p>
                 <div className="flex gap-2 font-medium pt-2 text-sm items-center ">
                   <img src={location} alt="icon" className="self-start pt-1" />
@@ -207,7 +247,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div className="flex">
                   <a
                     className="py-2 mt-2 px-4 text-[16px] w-full lg:w-[60%] text-center bg-white border-[1px] border-black rounded-[12px]"
-                    href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
+                    href="/eventos/significado-dos-sonhos"
                   >
                     Saiba mais
                   </a>
@@ -223,22 +263,20 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="h-full flex flex-col gap-2 justify-between">
               <div className="w-full">
                 <img
-                  src={trumpEvent}
+                  src={bolao}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
 
               <h5 className="font-title text-xl">
-                Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
-                Desafios para Brasil e Europa na Era Trump{" "}
+                Primeiro Happy Hour Bolão Alemão Transatlântico
               </h5>
-              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Próximo evento
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 06 de Maio de 2025 • 19h às
-                22h
+                <img src={schedule} alt="icon" /> 13 jun - 2025 • 19:00 às 22:00
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -250,7 +288,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px] cursor-pointer"
-                  href="/eventos/geopolitica-em-transicao"
+                  href="/eventos/bolao-alemao"
                 >
                   Saiba mais
                 </a>
@@ -264,21 +302,19 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="h-full flex flex-col gap-2 justify-between">
               <div className="w-full">
                 <img
-                  src={roboticaIA}
+                  src={skatalemao}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
               <h5 className="font-title text-xl ">
-                Robótica e IA Sem Mistério | Traduções que Trazem o Futuro para
-                o Presente
+                Primeiro Happy Hour SKAT Alemão Transatlântico
               </h5>
-              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Próximo evento
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 24 de abril de 2025 • 18h às
-                21h
+                <img src={schedule} alt="icon" /> 18 jun - 2025 • 19:00 às 22:00
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -290,8 +326,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/robotica-e-ia-sem-misterio"
-                  // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+                  href="/eventos/skat-alemao"
                 >
                   Saiba mais
                 </a>
@@ -305,19 +340,19 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="h-full flex flex-col gap-2 justify-between">
               <div className="w-full">
                 <img
-                  src={marketingia}
+                  src={coquetelNiver}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
-              <h5 className="font-title text-xl ">
-                O Futuro dos Eventos e Live Marketing com IA - Com Colja Dams
+              <h5 className="font-extrabold text-xl ">
+                Coquetel de 71º Aniversário do Club Transatlântico
               </h5>
-              <div className="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-red-100 border-2  border-red-400 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Evento realizado
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 25 mar - 2025 • 09:00 às 11:30
+                <img src={schedule} alt="icon" /> 27 mai - 2025 • 17:30 às 20:30
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -329,8 +364,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex">
                 <a
                   className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                  href="/eventos/o-futuro-dos-eventos"
-                  // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+                  href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
                 >
                   Saiba mais
                 </a>
@@ -351,6 +385,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <option value="Março">Março</option>
             <option value="Abril">Abril</option>
             <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
           </select>
           <select name="ano" value={selectedYear} onChange={handleYearChange}>
             <option value="">Todos</option>

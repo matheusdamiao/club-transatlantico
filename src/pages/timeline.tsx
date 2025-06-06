@@ -101,6 +101,59 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="h-full mt-8 pl-4">
           <div class="flex items-center gap-4">
             <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
+              <p className="text-3xl font-bold text-center">18</p>
+              <p className="text-lg font-bold">Junho</p>
+              <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
+              <div class="absolute left-[110px] lg:left-[150px]  w-[200px] min-[400px]:w-[250px] min-[500px]:w-[300px] sm:w-[500px] lg:w-[700px] flex gap-2 items-center">
+                <a
+                  href="/eventos/skat-alemao"
+                  class="text-[#2b2b2b] text-lg lg:text-2xl hover:underline hover:text-gray-900 transition-all"
+                >
+                  Primeiro Happy Hour SKAT Alemão Transatlântico
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-full mt-[54px] pl-4">
+          <div class="flex items-center gap-4">
+            <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
+              <p className="text-3xl font-bold text-center">13</p>
+              <p className="text-lg font-bold">Junho</p>
+              <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
+              <div class="absolute left-[110px] lg:left-[150px]  w-[200px] min-[400px]:w-[250px] min-[500px]:w-[300px] sm:w-[500px] lg:w-[700px] flex gap-2 items-center">
+                <a
+                  href="/eventos/bolao-alemao"
+                  class="text-[#2b2b2b] text-lg lg:text-2xl hover:underline hover:text-gray-900 transition-all"
+                >
+                  Primeiro Happy Hour Bolão Alemão Transatlântico
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-full mt-[54px] pl-4">
+          <div class="flex items-center gap-4">
+            <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
+              <p className="text-3xl font-bold text-center">9</p>
+              <p className="text-lg font-bold">Junho</p>
+              <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>
+              <div class="absolute left-[110px] lg:left-[150px]  w-[200px] min-[400px]:w-[250px] min-[500px]:w-[300px] sm:w-[500px] lg:w-[700px] flex gap-2 items-center">
+                <a
+                  href="/eventos/significado-dos-sonhos"
+                  class="text-[#2b2b2b] text-lg lg:text-2xl hover:underline hover:text-gray-900 transition-all"
+                >
+                  Qual o Significado de Nossos Sonhos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-full mt-[54px] pl-4">
+          <div class="flex items-center gap-4">
+            <div class="flex flex-col flex-0 flex-shrink-0 border-4 border-yellow-400  justify-center items-center  relative rounded-full  w-24 h-24">
               <p className="text-3xl font-bold text-center">27</p>
               <p className="text-lg font-bold">Maio</p>
               <div class="absolute bottom-[-61px] left-1/2 transform -translate-x-1/2 w-1 h-[60px] bg-gray-600"></div>

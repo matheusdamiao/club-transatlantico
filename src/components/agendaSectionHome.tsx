@@ -5,10 +5,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import arrow from "./../assets/images/arrow-right-thin.svg";
 import fototimeline from "./../assets/images/timeline-foto-home.png";
-import trumpEvent from "./../assets/images/eventos/geopolitica-maio.png";
-import coquetelAniversario from "./../assets/images/eventos/coquetel-aniversario-club.png";
-
-import robotic from "./../assets/images/eventos/robotica-abril.png";
+import skatalemao from "./../assets/images/eventos/skat-alemao.png";
+import bolaoalemao from "./../assets/images/eventos/bolao-alemao.png";
+import sonhos from "./../assets/images/eventos/significado-dos-sonhos.jpeg";
 import marketingia from "./../assets/images/eventos/marketing-ia-marco.png";
 import bigYellowArch from "./../assets/images/yellow-big-arch.png";
 import bigRedArch from "./../assets/images/red-big-arch.png";
@@ -30,7 +29,7 @@ const AgendaSectionHome = () => {
               data-aos-once="true"
               className="font-title lg:text-5xl text-4xl"
             >
-              Próximos eventos
+              Eventos recentes
             </h3>
             <p
               data-aos="fade-down"
@@ -56,19 +55,19 @@ const AgendaSectionHome = () => {
             <div className="h-full flex flex-col gap-2">
               <div className="w-full">
                 <img
-                  src={coquetelAniversario}
+                  src={sonhos}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
-              <h5 className="font-extrabold text-xl ">
-                Coquetel de 71º Aniversário do Club Transatlântico
+              <h5 className="font-title text-xl ">
+                Qual o Significado de Nossos Sonhos
               </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Próximo evento
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 27 mai - 2025 • 17:30 às 20:30
+                <img src={schedule} alt="icon" /> 09 jun - 2025 • 19:00 às 22:00
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -81,7 +80,7 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="/eventos/coquetel-de-71-aniversario-do-club-transatlantico"
+                href="/eventos/significado-dos-sonhos"
               >
                 Saiba mais
               </a>
@@ -94,20 +93,19 @@ const AgendaSectionHome = () => {
             <div className="h-full flex flex-col gap-2">
               <div className="w-full">
                 <img
-                  src={trumpEvent}
+                  src={bolaoalemao}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
               <h5 className="font-title text-xl ">
-                Jantar-Debate com o Prof. HOC - Geopolítica em Transição:
-                Desafios para Brasil e Europa na Era Trump
+                Primeiro Happy Hour Bolão Alemão Transatlântico
               </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Próximo evento
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 06 mai - 2025 • 19:00 às 22:00
+                <img src={schedule} alt="icon" /> 13 jun - 2025 • 19:00 às 22:00
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -120,14 +118,12 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="/eventos/geopolitica-em-transicao"
-                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+                href="/eventos/bolao-alemao"
               >
                 Saiba mais
               </a>
             </div>
           </div>
-
           <div
             id="card"
             className="flex flex-col w-full xl:max-w-[400px] xl:h-[500px] justify-between"
@@ -135,20 +131,19 @@ const AgendaSectionHome = () => {
             <div className="h-full flex flex-col gap-2">
               <div className="w-full">
                 <img
-                  src={robotic}
+                  src={skatalemao}
                   alt=""
                   className="object-cover w-full sm:max-h-[400px] xl:max-w-[400px]"
                 />
               </div>
               <h5 className="font-title text-xl ">
-                Robótica e IA Sem Mistério | Traduções que Trazem o Futuro para
-                o Presente
+                Primeiro Happy Hour SKAT Alemão Transatlântico
               </h5>
-              <div class="bg-green-100 border-2  border-green-300 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
-                Presencial
+              <div class="bg-green-100 border-2  border-green-500 text-gray-700 text-[12px] w-fit rounded-[12px] py-1 px-3">
+                Próximo evento
               </div>
               <p className="flex gap-3 font-medium pt-2 text-gray-800">
-                <img src={schedule} alt="icon" /> 24 abr - 2025 • 18:00 às 21:00
+                <img src={schedule} alt="icon" /> 18 jun - 2025 • 19:00 às 22:00
               </p>
               <div className="flex gap-2 font-medium pt-2 text-sm ">
                 <img src={location} alt="icon" className="self-start pt-1" />
@@ -161,8 +156,7 @@ const AgendaSectionHome = () => {
             <div className="flex">
               <a
                 className="py-2 mt-2 px-4 text-[16px] w-full text-center bg-white border-[1px] border-black rounded-[12px]"
-                href="/eventos/robotica-e-ia-sem-misterio"
-                // href="https://www.sympla.com.br/evento/jantar-debate-com-o-prof-hoc-geopolitica-em-transicao-desafios-para-brasil-e-europa-na-era-trump/2914009"
+                href="/eventos/skat-alemao"
               >
                 Saiba mais
               </a>
